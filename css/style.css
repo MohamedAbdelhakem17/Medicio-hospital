@@ -1,0 +1,638 @@
+/* =========================== Start Global roules ========================= */
+@font-face {
+    font-family: "Roboto";
+    src: url(../webfonts/Roboto/Roboto-Bold.ttf),
+        url(../webfonts/Roboto/Roboto-Medium.ttf),
+        url(../webfonts/Roboto/Roboto-Regular.ttf),
+        url(../webfonts/Roboto/Roboto-Light.ttf);
+}
+
+:root {
+    --main-color: #3fbabf;
+    --text-color: #25252585;
+    --section-color: #3fbbbf5b;
+    --main-transition: all 0.4s linear;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto";
+    background-color: #f9fafb;
+}
+
+.main-title {
+    position: relative;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.main-title::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    background-color: var(--main-color);
+    height: 3px;
+    width: 70px;
+}
+
+/* =========================== End Global roules ========================= */
+
+/* =========================== Start Navbar ========================= */
+.time {
+    background-color: var(--main-color);
+}
+
+.nav-link {
+    font-weight: 300 !important;
+    color: var(--text-color);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--main-color) !important;
+}
+
+.btn-book {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.btn-book:hover {
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+}
+
+@media screen and (max-width: 922px) {
+    .navbar-brand {
+        width: 50% !important;
+    }
+}
+
+/* =========================== End Navbar ========================= */
+
+/* =========================== Start Home ========================= */
+
+.carousel-inner {
+    height: 500px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: var(--main-color);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    display: grid;
+    place-items: center;
+    color: white;
+}
+
+.carousel-control.left {
+    left: 50px;
+}
+
+.carousel-control.right {
+    right: 0px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 0rem;
+    background-color: var(--main-color);
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 50%;
+    left: 5%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+    width: 90%;
+    border-top: 10px solid var(--main-color);
+    background-color: #ffffff70;
+    padding: 3rem 1.5rem;
+}
+
+.carousel-caption a {
+    text-decoration: none;
+}
+
+.carousel-caption h5 {
+    color: black;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.carousel-caption p {
+    color: var(--text-color);
+    line-height: 1.8;
+    padding: 15px 0px;
+}
+
+@media screen and (max-width: 922px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .carousel-caption {
+        bottom: -120%;
+    }
+}
+
+/* ========================== End Home ========================= */
+
+/* ========================== Start Blog ========================= */
+.blog {
+    background-color: #f9fafb;
+}
+
+.blog .icon-box {
+    position: relative;
+    overflow: hidden;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    z-index: 1;
+}
+
+.blog .icon-box:hover {
+    color: white;
+}
+
+.blog .icon-box::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background-color: var(--main-color);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    z-index: -1;
+}
+
+.blog .icon-box:hover::after {
+    top: 0%;
+}
+
+.blog .icon-box i {
+    color: var(--main-color);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.blog .icon-box:hover i {
+    color: white;
+}
+
+.blog .icon-box h4 {
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+
+.blog .icon-box p {
+    font-weight: lighter;
+    font-size: .9rem;
+    line-height: 1.8;
+}
+
+/* ========================== End Blog ========================= */
+
+/* ========================== End Info ========================= */
+.info {
+    background-color: var(--main-color);
+}
+
+.info .container a {
+    color: white;
+    text-decoration: none;
+    border: 2px solid;
+    border-radius: 20px;
+    transition: var(--main-transition);
+    padding: 15px 30px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.info .container a:hover {
+    background-color: white;
+    color: var(--main-color);
+}
+
+/* ========================== End Info ========================= */
+
+/* ========================== Start About ========================= */
+.about .info h4 {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.about .about-info h4+p {
+    font-style: italic;
+}
+
+.about .about-info p {
+    line-height: 1.8;
+    padding: 8px 0px;
+}
+
+.about .about-info ul li {
+    padding: 5px 0px;
+    font-weight: lighter;
+}
+
+.about .about-info ul li i {
+    color: var(--main-color);
+}
+
+.about .box h5 {
+    font-size: 3rem;
+    color: var(--text-color);
+}
+
+.about .box i {
+    color: var(--main-color);
+    margin-right: 5px;
+}
+
+.about .box p {
+    font-weight: 100;
+}
+
+.about .box p span {
+    font-weight: 900;
+}
+
+.about .box a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.about .box a:hover {
+    color: var(--main-color);
+}
+
+/* ========================== End About ========================= */
+
+.features .text .icon i {
+    color: var(--main-color);
+}
+
+/* ========================== Start SERVICES ========================= */
+.services .icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin: 0 auto;
+    padding: .5rem;
+    display: grid;
+    place-items: center;
+    box-shadow: 0px 0px 20px var(--main-color);
+}
+
+.services .icon i {
+    color: var(--main-color);
+}
+
+.services .row .main-title {
+    font-size: 1.1rem;
+    margin: 10px 0px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    cursor: pointer;
+}
+
+.services .row .main-title:hover {
+    color: var(--main-color);
+}
+
+/* ========================== End SERVICES ========================= */
+
+/* ========================== ٍStart MAKE AN APPOINTMENT ========================= */
+.appoinment {
+    background-color: var(--section-color);
+}
+
+/* ========================== End MAKE AN APPOINTMENT ========================= */
+
+/* ========================== End DEPARTMENTS ========================= */
+.departments .depa {
+    padding: .5rem;
+    border-left: var(--section-color) 5px solid;
+    margin-bottom: 1rem;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.departments .depa:hover {
+    border-left-color: var(--main-color);
+}
+
+.departments .depa:hover h3 {
+    color: var(--main-color);
+}
+
+.departments .depa.active {
+    border-left-color: var(--main-color);
+    background-color: #3fbbbf2c;
+}
+
+.departments .depa h3 {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.departments .depa p {
+    line-height: 1.7;
+    font-weight: 100;
+    padding: 0rem .5rem;
+}
+
+.departments .inffo {
+    background-color: white;
+}
+
+.departments .inffo h3 {
+    color: #3fbabf;
+    padding: 1rem 0rem;
+}
+
+.departments .inffo p {
+    font-weight: 300;
+    font-style: italic;
+}
+
+.departments .inffo .row p {
+    color: var(--text-color);
+    padding: 1rem 0rem;
+    line-height: 1.7;
+    width: 90%;
+}
+
+/* ========================== End DEPARTMENTS ========================= */
+
+/* ========================== Start testimonials ========================= */
+.testimonials .comment {
+    margin-bottom: 1.5rem;
+}
+
+.testimonials .comment .header {
+    background-color: var(--section-color);
+    padding: 1.5rem 1.5rem 2rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.testimonials .comment .header p {
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.testimonials .comment .header p i {
+    font-size: 1.5rem;
+    color: var(--main-color);
+    padding: .5rem;
+}
+
+.testimonials .comment .profile img {
+    transform: translate(1rem, -2.5rem);
+    -webkit-transform: translate(1rem, -2.5rem);
+    -moz-transform: translate(1rem, -2.5rem);
+    -ms-transform: translate(1rem, -2.5rem);
+    -o-transform: translate(1rem, -2.5rem);
+    border: 5px solid white;
+}
+
+.testimonials .comment .profile h3 {
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+/* ========================== End testimonials ========================= */
+
+/* ========================== Start doctors ========================= */
+.doctors {
+    background-color: var(--section-color);
+}
+
+.doctors .doctor {
+    overflow: hidden;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    margin-bottom: .9rem;
+}
+
+.doctors .doctor .link {
+    position: absolute;
+    width: 92.3%;
+    bottom: 22%;
+    background-color: rgba(255, 255, 255, 0.562);
+    padding: 1rem;
+    opacity: 0;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.doctors .doctor:hover .link {
+    opacity: 1;
+}
+
+.doctors .doctor .link a {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+
+.doctors .doctor .link a:hover {
+    color: var(--main-color);
+}
+
+.doctors .doctor .text h2 {
+    font-size: 1.1rem;
+}
+
+/* ========================== End doctors ========================= */
+
+/* ========================== Start pricing ========================= */
+.pricing .pric {
+    margin-bottom: 1.5rem;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    -webkit-border-radius: 20px;
+}
+
+.pricing .pric .header,
+.pricing .pric .footer {
+    padding: 1rem;
+    background-color: var(--text-color);
+    color: white;
+}
+
+.pricing .pric .body {
+    background-color: white;
+    padding: 1rem .5rem;
+}
+
+.pricing .pric .body p {
+    padding: .7rem 0rem;
+}
+
+.pricing .pric .body h4 span {
+    color: var(--main-color);
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.pricing .pric:nth-child(2) .header {
+    background-color: var(--main-color);
+}
+
+.pricing .pric:last-child .header {
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing .pric:last-child .header::after {
+    content: "Advanced";
+    position: absolute;
+    font-size: .7rem;
+    width: 150px;
+    top: 20%;
+    right: -15%;
+    background-color: var(--main-color);
+    padding: .5rem 1rem;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+/* ========================== End pricing ========================= */
+
+/* ========================== Start contact ========================= */
+.contact .icon {
+    width: 70px;
+    height: 70px;
+    margin: .5rem auto;
+    display: grid;
+    place-items: center;
+    border: 2px dotted var(--main-color);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.contact .icon i {
+    color: var(--main-color);
+}
+
+/* ========================== End contact ========================= */
+
+
+/* ================================= Start Footer ================================= */
+.back-to-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    z-index: 22222222222222222;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  
+  .back-to-top i {
+    font-size: 30px;
+    color: white;
+  }
+  
+/* ================================= End Footer ================================= */
